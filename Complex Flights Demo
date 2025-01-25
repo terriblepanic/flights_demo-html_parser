@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Complex Flights Demo</title>
+</head>
+<body>
+  <h1>Complex Flights Demo</h1>
+
+  <!-- Прямые рейсы -->
+  <div class="flight-card" data-connection="false">
+    <span class="from">Moscow (SVO)</span>
+    <span class="to">Paris (CDG)</span>
+    <span class="date">2025-04-01</span>
+    <span class="base_price">10000</span>
+  </div>
+
+  <div class="flight-card" data-connection="false">
+    <span class="from">Tokyo (HND)</span>
+    <span class="to">New York (JFK)</span>
+    <span class="date">2025-05-05</span>
+    <span class="base_price">50000</span>
+  </div>
+
+  <div class="flight-card" data-connection="false">
+    <span class="from">London (LHR)</span>
+    <span class="to">Barcelona (BCN)</span>
+    <span class="date">2025-06-10</span>
+    <span class="base_price">12000</span>
+  </div>
+
+  <div class="flight-card" data-connection="false">
+    <span class="from">Singapore (SIN)</span>
+    <span class="to">Sydney (SYD)</span>
+    <span class="date">2025-07-20</span>
+    <span class="base_price">55000</span>
+  </div>
+
+  <div class="flight-card" data-connection="false">
+    <span class="from">Dubai (DXB)</span>
+    <span class="to">Rome (FCO)</span>
+    <span class="date">2025-08-15</span>
+    <span class="base_price">7000</span>
+  </div>
+
+  <div class="flight-card" data-connection="false">
+    <span class="from">Los Angeles (LAX)</span>
+    <span class="to">Chicago (ORD)</span>
+    <span class="date">2025-09-10</span>
+    <span class="base_price">15000</span>
+  </div>
+
+  <div class="flight-card" data-connection="false">
+    <span class="from">Toronto (YYZ)</span>
+    <span class="to">Vancouver (YVR)</span>
+    <span class="date">2025-10-05</span>
+    <span class="base_price">13000</span>
+  </div>
+
+  <div class="flight-card" data-connection="false">
+    <span class="from">Beijing (PEK)</span>
+    <span class="to">Seoul (ICN)</span>
+    <span class="date">2025-11-12</span>
+    <span class="base_price">8000</span>
+  </div>
+
+  <div class="flight-card" data-connection="false">
+    <span class="from">Frankfurt (FRA)</span>
+    <span class="to">Amsterdam (AMS)</span>
+    <span class="date">2025-12-01</span>
+    <span class="base_price">9000</span>
+  </div>
+
+  <div class="flight-card" data-connection="false">
+    <span class="from">Sydney (SYD)</span>
+    <span class="to">Auckland (AKL)</span>
+    <span class="date">2025-12-15</span>
+    <span class="base_price">6000</span>
+  </div>
+
+  <!-- Пересадочные маршруты -->
+  
+  <!-- Moscow (SVO) -> Berlin (BER) -> Paris (CDG) -->
+  <div class="flight-card" data-connection="true">
+    <span class="from">Moscow (SVO)</span>
+    <span class="to">Berlin (BER)</span>
+    <span class="date">2025-04-02</span>
+    <span class="base_price">8000</span>
+  </div>
+  <div class="flight-card" data-connection="true">
+    <span class="from">Berlin (BER)</span>
+    <span class="to">Paris (CDG)</span>
+    <span class="date">2025-04-03</span>
+    <span class="base_price">4500</span>
+  </div>
+
+  <!-- Paris (CDG) -> Dubai (DXB) -> Rome (FCO) -->
+  <div class="flight-card" data-connection="true">
+    <span class="from">Paris (CDG)</span>
+    <span class="to">Dubai (DXB)</span>
+    <span class="date">2025-08-16</span>
+    <span class="base_price">7000</span>
+  </div>
+  <div class="flight-card" data-connection="true">
+    <span class="from">Dubai (DXB)</span>
+    <span class="to">Rome (FCO)</span>
+    <span class="date">2025-08-17</span>
+    <span class="base_price">6000</span>
+  </div>
+
+  <!-- Tokyo (HND) -> Seoul (ICN) -> New York (JFK) -->
+  <div class="flight-card" data-connection="true">
+    <span class="from">Tokyo (HND)</span>
+    <span class="to">Seoul (ICN)</span>
+    <span class="date">2025-05-06</span>
+    <span class="base_price">5000</span>
+  </div>
+  <div class="flight-card" data-connection="true">
+    <span class="from">Seoul (ICN)</span>
+    <span class="to">New York (JFK)</span>
+    <span class="date">2025-05-07</span>
+    <span class="base_price">4500</span>
+  </div>
+
+  <!-- Los Angeles (LAX) -> Chicago (ORD) -> Toronto (YYZ) -->
+  <div class="flight-card" data-connection="true">
+    <span class="from">Los Angeles (LAX)</span>
+    <span class="to">Chicago (ORD)</span>
+    <span class="date">2025-09-11</span>
+    <span class="base_price">7000</span>
+  </div>
+  <div class="flight-card" data-connection="true">
+    <span class="from">Chicago (ORD)</span>
+    <span class="to">Toronto (YYZ)</span>
+    <span class="date">2025-09-12</span>
+    <span class="base_price">6000</span>
+  </div>
+
+  <!-- Frankfurt (FRA) -> Amsterdam (AMS) -> London (LHR) -->
+  <div class="flight-card" data-connection="true">
+    <span class="from">Frankfurt (FRA)</span>
+    <span class="to">Amsterdam (AMS)</span>
+    <span class="date">2025-12-02</span>
+    <span class="base_price">4000</span>
+  </div>
+  <div class="flight-card" data-connection="true">
+    <span class="from">Amsterdam (AMS)</span>
+    <span class="to">London (LHR)</span>
+    <span class="date">2025-12-03</span>
+    <span class="base_price">3000</span>
+  </div>
+
+  <!-- Beijing (PEK) -> Singapore (SIN) -> Sydney (SYD) -->
+  <div class="flight-card" data-connection="true">
+    <span class="from">Beijing (PEK)</span>
+    <span class="to">Singapore (SIN)</span>
+    <span class="date">2025-11-13</span>
+    <span class="base_price">7000</span>
+  </div>
+  <div class="flight-card" data-connection="true">
+    <span class="from">Singapore (SIN)</span>
+    <span class="to">Sydney (SYD)</span>
+    <span class="date">2025-11-14</span>
+    <span class="base_price">5000</span>
+  </div>
+
+  <!-- Moscow (SVO) -> Dubai (DXB) -> Tokyo (HND) -->
+  <div class="flight-card" data-connection="true">
+    <span class="from">Moscow (SVO)</span>
+    <span class="to">Dubai (DXB)</span>
+    <span class="date">2025-04-04</span>
+    <span class="base_price">9000</span>
+  </div>
+  <div class="flight-card" data-connection="true">
+    <span class="from">Dubai (DXB)</span>
+    <span class="to">Tokyo (HND)</span>
+    <span class="date">2025-04-05</span>
+    <span class="base_price">8000</span>
+  </div>
+
+  <!-- Los Angeles (LAX) -> Frankfurt (FRA) -> Tokyo (HND) -->
+  <div class="flight-card" data-connection="true">
+    <span class="from">Los Angeles (LAX)</span>
+    <span class="to">Frankfurt (FRA)</span>
+    <span class="date">2025-09-13</span>
+    <span class="base_price">10000</span>
+  </div>
+  <div class="flight-card" data-connection="true">
+    <span class="from">Frankfurt (FRA)</span>
+    <span class="to">Tokyo (HND)</span>
+    <span class="date">2025-09-14</span>
+    <span class="base_price">9000</span>
+  </div>
+
+  <!-- Toronto (YYZ) -> Beijing (PEK) -> Singapore (SIN) -->
+  <div class="flight-card" data-connection="true">
+    <span class="from">Toronto (YYZ)</span>
+    <span class="to">Beijing (PEK)</span>
+    <span class="date">2025-10-06</span>
+    <span class="base_price">11000</span>
+  </div>
+  <div class="flight-card" data-connection="true">
+    <span class="from">Beijing (PEK)</span>
+    <span class="to">Singapore (SIN)</span>
+    <span class="date">2025-10-07</span>
+    <span class="base_price">7000</span>
+  </div>
+
+  <!-- Singapore (SIN) -> Berlin (BER) -> Moscow (SVO) -->
+  <div class="flight-card" data-connection="true">
+    <span class="from">Singapore (SIN)</span>
+    <span class="to">Berlin (BER)</span>
+    <span class="date">2025-07-21</span>
+    <span class="base_price">8500</span>
+  </div>
+  <div class="flight-card" data-connection="true">
+    <span class="from">Berlin (BER)</span>
+    <span class="to">Moscow (SVO)</span>
+    <span class="date">2025-07-22</span>
+    <span class="base_price">8000</span>
+  </div>
+
+  <!-- Frankfurt (FRA) -> Moscow (SVO) -> New York (JFK) -->
+  <div class="flight-card" data-connection="true">
+    <span class="from">Frankfurt (FRA)</span>
+    <span class="to">Moscow (SVO)</span>
+    <span class="date">2025-12-04</span>
+    <span class="base_price">9500</span>
+  </div>
+  <div class="flight-card" data-connection="true">
+    <span class="from">Moscow (SVO)</span>
+    <span class="to">New York (JFK)</span>
+    <span class="date">2025-12-05</span>
+    <span class="base_price">12000</span>
+  </div>
+
+  <!-- Sydney (SYD) -> Amsterdam (AMS) -> London (LHR) -->
+  <div class="flight-card" data-connection="true">
+    <span class="from">Sydney (SYD)</span>
+    <span class="to">Amsterdam (AMS)</span>
+    <span class="date">2025-07-21</span>
+    <span class="base_price">13000</span>
+  </div>
+  <div class="flight-card" data-connection="true">
+    <span class="from">Amsterdam (AMS)</span>
+    <span class="to">London (LHR)</span>
+    <span class="date">2025-07-22</span>
+    <span class="base_price">4000</span>
+  </div>
+  
+  <!-- Дополнительные прямые рейсы -->
+  <div class="flight-card" data-connection="false">
+    <span class="from">Madrid (MAD)</span>
+    <span class="to">Lisbon (LIS)</span>
+    <span class="date">2025-08-20</span>
+    <span class="base_price">5000</span>
+  </div>
+  
+  <div class="flight-card" data-connection="false">
+    <span class="from">Hong Kong (HKG)</span>
+    <span class="to">Bangkok (BKK)</span>
+    <span class="date">2025-09-25</span>
+    <span class="base_price">7500</span>
+  </div>
+  
+  <!-- Пересадочные маршруты -->
+  
+  <!-- Madrid (MAD) -> Lisbon (LIS) -> Rome (FCO) -->
+  <div class="flight-card" data-connection="true">
+    <span class="from">Madrid (MAD)</span>
+    <span class="to">Lisbon (LIS)</span>
+    <span class="date">2025-08-21</span>
+    <span class="base_price">3000</span>
+  </div>
+  <div class="flight-card" data-connection="true">
+    <span class="from">Lisbon (LIS)</span>
+    <span class="to">Rome (FCO)</span>
+    <span class="date">2025-08-22</span>
+    <span class="base_price">2000</span>
+  </div>
+  
+  <!-- Hong Kong (HKG) -> Dubai (DXB) -> Sydney (SYD) -->
+  <div class="flight-card" data-connection="true">
+    <span class="from">Hong Kong (HKG)</span>
+    <span class="to">Dubai (DXB)</span>
+    <span class="date">2025-09-26</span>
+    <span class="base_price">9000</span>
+  </div>
+  <div class="flight-card" data-connection="true">
+    <span class="from">Dubai (DXB)</span>
+    <span class="to">Sydney (SYD)</span>
+    <span class="date">2025-09-27</span>
+    <span class="base_price">6500</span>
+  </div>
+  
+  <!-- Дополнительные рейсы для разнообразия -->
+  
+  <div class="flight-card" data-connection="false">
+    <span class="from">Rome (FCO)</span>
+    <span class="to">Vienna (VIE)</span>
+    <span class="date">2025-10-15</span>
+    <span class="base_price">4000</span>
+  </div>
+  
+  <div class="flight-card" data-connection="false">
+    <span class="from">Vienna (VIE)</span>
+    <span class="to">Prague (PRG)</span>
+    <span class="date">2025-10-16</span>
+    <span class="base_price">3000</span>
+  </div>
+  
+  <!-- Пересадочные маршруты -->
+  
+  <!-- Vienna (VIE) -> Prague (PRG) -> Berlin (BER) -->
+  <div class="flight-card" data-connection="true">
+    <span class="from">Vienna (VIE)</span>
+    <span class="to">Prague (PRG)</span>
+    <span class="date">2025-10-17</span>
+    <span class="base_price">2000</span>
+  </div>
+  <div class="flight-card" data-connection="true">
+    <span class="from">Prague (PRG)</span>
+    <span class="to">Berlin (BER)</span>
+    <span class="date">2025-10-18</span>
+    <span class="base_price">2500</span>
+  </div>
+
+</body>
+</html>
