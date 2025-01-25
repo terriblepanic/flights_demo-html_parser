@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Complex Demo Flights</title>
+  <meta charset="UTF-8" />
+  <title>Complex Flights Demo</title>
 </head>
 <body>
   <h1>Complex Flights Demo</h1>
 
-  <!-- Пример данных -->
-  <!-- from="..." to="..." date="YYYY-MM-DD" base_price="..." connection="true/false" -->
-
+  <!-- data-connection="false" -> прямой, "true" -> часть маршрута (пересадка) -->
   <div class="flight-card" data-connection="false">
     <span class="from">Moscow (SVO)</span>
     <span class="to">Paris (CDG)</span>
@@ -17,41 +15,48 @@
     <span class="base_price">10000</span>
   </div>
 
+  <!-- Пересадка: SVO -> BER (04-02), BER -> CDG (04-03) -->
   <div class="flight-card" data-connection="true">
     <span class="from">Moscow (SVO)</span>
     <span class="to">Berlin (BER)</span>
     <span class="date">2025-04-02</span>
     <span class="base_price">8000</span>
   </div>
-
   <div class="flight-card" data-connection="true">
     <span class="from">Berlin (BER)</span>
     <span class="to">Paris (CDG)</span>
     <span class="date">2025-04-03</span>
-    <span class="base_price">4000</span>
+    <span class="base_price">4500</span>
   </div>
 
+  <!-- Пример «туда-обратно» (CDG->SVO) -->
+  <div class="flight-card" data-connection="false">
+    <span class="from">Paris (CDG)</span>
+    <span class="to">Moscow (SVO)</span>
+    <span class="date">2025-04-10</span>
+    <span class="base_price">10000</span>
+  </div>
+
+  <!-- Другие маршруты -->
   <div class="flight-card" data-connection="false">
     <span class="from">Tokyo (HND)</span>
     <span class="to">New York (JFK)</span>
-    <span class="date">2025-04-10</span>
+    <span class="date">2025-05-05</span>
     <span class="base_price">50000</span>
   </div>
-
   <div class="flight-card" data-connection="false">
     <span class="from">London (LHR)</span>
     <span class="to">Barcelona (BCN)</span>
-    <span class="date">2025-05-05</span>
+    <span class="date">2025-06-10</span>
     <span class="base_price">120</span>
   </div>
-
   <div class="flight-card" data-connection="false">
     <span class="from">Singapore (SIN)</span>
     <span class="to">Sydney (SYD)</span>
-    <span class="date">2025-06-20</span>
+    <span class="date">2025-07-20</span>
     <span class="base_price">550</span>
   </div>
 
-  <!-- Добавьте ещё 10+ карточек, чтобы было побольше данных -->
+  <!-- и т.д. добавьте до 10+ городов -->
 </body>
 </html>
